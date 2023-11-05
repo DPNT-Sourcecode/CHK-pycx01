@@ -43,3 +43,22 @@ class TestCheckout():
 
     def test_checkout6f(self):
         assert checkout_solution.checkout("FFFFFF") == 40
+
+    def test_checkout15H(self):
+        assert checkout_solution.checkout("H"*15) == 125
+
+    def test_checkout2K(self):
+        assert checkout_solution.checkout("KK") == 150
+
+    def test_checkout3NM(self):
+        assert checkout_solution.checkout("NNNM") == 120
+
+    def test_checkout5P(self):
+        assert checkout_solution.checkout("PPPPP") == 200
+
+    def test_checkout3Q(self):
+        assert checkout_solution.checkout("QQQ") == 80
+
+    def test_checkout4Q3R(self):
+        assert checkout_solution.checkout("RRRQQQQ") == 230
+
