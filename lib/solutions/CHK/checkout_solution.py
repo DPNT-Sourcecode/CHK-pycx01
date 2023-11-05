@@ -1,16 +1,16 @@
-
+from functools import reduce
 
 # noinspection PyUnusedLocal
 # skus = unicode string
 item_prices = {"A": 50, "B": 30, "C": 20, "D": 15,
                "E": 40, "F": 10, "G": 20, "H": 10,
-               "I": 35, "J": 60, "K": 80, "L": 90,
+               "I": 35, "J": 60, "K": 70, "L": 90,
                "M": 15, "N": 40, "O": 10, "P": 50,
-               "Q": 30, "R": 50, "S": 30, "T": 20,
-               "U": 40, "V": 50, "W": 20, "X": 90,
-               "Y": 10, "Z": 50}
+               "Q": 30, "R": 50, "S": 20, "T": 20,
+               "U": 40, "V": 50, "W": 20, "X": 17,
+               "Y": 20, "Z": 21}
 
-
+bundle = ["Z", "S", "T", "Y" "X"]  # sorted by price
 
 
 
@@ -63,7 +63,7 @@ def checkout(skus):
     discount += five_hs * 5
 
     # K discount
-    discount += (item_counts["K"] // 2) * 10
+    discount += (item_counts["K"] // 2) * 40
 
     # N discount using Ms
     free_ms = item_counts["N"] // 3
@@ -90,7 +90,12 @@ def checkout(skus):
     two_vs = remainder_v_count // 2
     discount += two_vs * 10
 
+    # bundle discount
+    for item in bundle:
+        bundle_count +=item_counts[item]
+
 
 
 
     return total - discount
+
