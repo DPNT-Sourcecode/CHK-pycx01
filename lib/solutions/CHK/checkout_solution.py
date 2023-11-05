@@ -91,7 +91,7 @@ def checkout(skus):
     discount += two_vs * 10
 
     # bundle discount
-    bundle_item_count = reduce(lambda x, y: item_counts[x]+y, bundle)
+    bundle_item_count = reduce(lambda x, y: item_counts[x]+item_counts[y], bundle)
     bundle_count = bundle_item_count // 3
     to_del = bundle_count * 3
     total += bundle_count * 45
@@ -107,3 +107,4 @@ def checkout(skus):
 
 
     return total - discount
+
