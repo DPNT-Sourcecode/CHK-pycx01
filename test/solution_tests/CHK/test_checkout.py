@@ -48,7 +48,7 @@ class TestCheckout():
         assert checkout_solution.checkout("H"*15) == 125
 
     def test_checkout2K(self):
-        assert checkout_solution.checkout("KK") == 150
+        assert checkout_solution.checkout("KK") == 120
 
     def test_checkout3NM(self):
         assert checkout_solution.checkout("NNNM") == 120
@@ -70,4 +70,3 @@ class TestCheckout():
 
         #prices have changed
         # k discount change
-
