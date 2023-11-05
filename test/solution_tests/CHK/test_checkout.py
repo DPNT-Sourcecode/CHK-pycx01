@@ -84,4 +84,8 @@ class TestCheckout():
     def test_checkout_bundleSTXYZ(self):
         assert checkout_solution.checkout("STXYZSTXYZSTXYZ") == 225
 
+    def test_checkout_bundleSTXYZ(self):
+        assert checkout_solution.checkout("STXYZSTXYZSTXYZAAA") == 355
+
+
 
