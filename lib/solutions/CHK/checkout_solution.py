@@ -46,7 +46,7 @@ def checkout(skus):
 
     # E discount before b
     free_bs = item_counts["E"] // 2
-    remainder_b_count = item_counts["E"] - min(item_counts["B"], free_bs)
+    remainder_b_count = item_counts["B"] - min(item_counts["B"], free_bs)
     discount += min(item_counts["B"], free_bs)*30
 
     # B discount
@@ -75,6 +75,7 @@ def checkout(skus):
 
 
     return total - discount
+
 
 
 
