@@ -26,9 +26,3 @@ def checkout(skus):
         discount += (b_count // 2) * 15
 
     return total - discount
-
-
-
-
-
-
