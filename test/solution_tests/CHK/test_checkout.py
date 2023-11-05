@@ -62,3 +62,10 @@ class TestCheckout():
     def test_checkout4Q3R(self):
         assert checkout_solution.checkout("RRRQQQQ") == 230
 
+    def test_checkout4U(self):
+        assert checkout_solution.checkout("UUUU") == 120
+
+    def test_checkout5V(self):
+        assert checkout_solution.checkout("VVVVV") == 220
+
+
