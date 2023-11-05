@@ -94,8 +94,3 @@ def checkout(skus):
 
 
     return total - discount
-
-
-
-
-
