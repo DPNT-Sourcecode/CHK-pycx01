@@ -63,7 +63,7 @@ def checkout(skus):
     discount += five_hs * 5
 
     # K discount
-    discount += (item_counts["K"] // 2) * 40
+    discount += (item_counts["K"] // 2) * 20
 
     # N discount using Ms
     free_ms = item_counts["N"] // 3
@@ -109,5 +109,6 @@ def checkout(skus):
 
 
     return total - discount
+
 
 

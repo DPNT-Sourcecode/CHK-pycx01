@@ -68,5 +68,20 @@ class TestCheckout():
     def test_checkout5V(self):
         assert checkout_solution.checkout("VVVVV") == 220
 
-        #prices have changed
-        # k discount change
+
+    def test_checkout_bundleS(self):
+        assert checkout_solution.checkout("SSS") == 45
+
+    def test_checkout_bundleST(self):
+        assert checkout_solution.checkout("SSSTTT") == 90
+
+    def test_checkout_bundleSTX(self):
+        assert checkout_solution.checkout("SSSTTTXXX") == 135
+
+    def test_checkout_bundleSTXY(self):
+        assert checkout_solution.checkout("SSSTTTXXXYYY") == 180
+
+    def test_checkout_bundleSTXYZ(self):
+        assert checkout_solution.checkout("STXYZSTXYZSTXYZ") == 225
+
+
