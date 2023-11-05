@@ -43,5 +43,3 @@ class TestCheckout():
 
     def test_checkout6f(self):
         assert checkout_solution.checkout("FFFFFF") == 40
-
-
