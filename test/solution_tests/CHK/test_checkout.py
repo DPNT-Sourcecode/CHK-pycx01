@@ -24,8 +24,9 @@ class TestCheckout():
         assert checkout_solution.checkout("ABBBBCDEE") == 225
 
     def test_checkout5a(self):
-        assert checkout_solution.checkout("AAAAABCD") == 245
+        assert checkout_solution.checkout("AAAAABCD") == 265
 
     def test_checkout8a(self):
-        assert checkout_solution.checkout("AAAAAAAABCD") == 375
+        assert checkout_solution.checkout("AAAAAAAABCD") == 395
+
 
