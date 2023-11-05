@@ -17,6 +17,7 @@ def checkout(skus):
         elif item == "B": b_count+=1
         if item_prices.get(item):
             total += item_prices.get(item)
+        else: return -1
 
     #apply discounts
     if a_count>=3:
@@ -25,6 +26,7 @@ def checkout(skus):
         discount += (b_count // 2) * 15
 
     return total - discount
+
 
 
 
