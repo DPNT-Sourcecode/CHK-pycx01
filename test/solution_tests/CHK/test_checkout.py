@@ -18,7 +18,7 @@ class TestCheckout():
         assert checkout_solution.checkout("BBBBEE") == 155
 
     def test_checkout_none(self):
-        assert checkout_solution.checkout("") == -1
+        assert checkout_solution.checkout("") == 0
 
     def test_checkout_badandgood(self):
         assert checkout_solution.checkout("BCAa") == -1
@@ -34,3 +34,4 @@ class TestCheckout():
 
     def test_checkout8a(self):
         assert checkout_solution.checkout("AAAAAAAABCD") == 395
+
