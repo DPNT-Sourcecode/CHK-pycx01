@@ -13,3 +13,7 @@ class TestCheckout():
     def test_checkout4b(self):
         assert checkout_solution.checkout("ABBBBCD") == 175
 
+    def test_checkout_none(self):
+        assert checkout_solution.checkout("") == 0
+
+
