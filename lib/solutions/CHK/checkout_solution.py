@@ -10,7 +10,7 @@ item_prices = {"A": 50, "B": 30, "C": 20, "D": 15,
                "U": 40, "V": 50, "W": 20, "X": 17,
                "Y": 20, "Z": 21}
 
-bundle = ["Z", "S", "T", "Y" "X"]  # sorted by price
+bundle = ["Z", "S", "T", "Y", "X"]  # sorted by price
 
 
 
@@ -91,7 +91,9 @@ def checkout(skus):
     discount += two_vs * 10
 
     # bundle discount
-    bundle_item_count = reduce(lambda x, y: item_counts[x]+item_counts[y], bundle)
+    bundle_item_count = 0
+    for item in bundle:
+        bundle_item_count += item_counts[item]
     bundle_count = bundle_item_count // 3
     to_del = bundle_count * 3
     total += bundle_count * 45
@@ -107,4 +109,5 @@ def checkout(skus):
 
 
     return total - discount
+
 
