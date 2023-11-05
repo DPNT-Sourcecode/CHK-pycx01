@@ -36,17 +36,14 @@ def checkout(skus):
     print(threes)
     discount += threes * 20
 
-
-    # B discount
-    discount += (b_count // 2) * 15
-
-    # E discount
+    # E discount before b
     free_bs = e_count // 2
+    remainder_b_count = b_count - min(b_count, free_bs)
     discount += min(b_count, free_bs)*30
 
+    # B discount
+    discount += (remainder_b_count // 2) * 15
+
+
+
     return total - discount
-
-
-
-
-
