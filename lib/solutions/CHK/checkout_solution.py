@@ -2,7 +2,7 @@
 
 # noinspection PyUnusedLocal
 # skus = unicode string
-item_prices = {"A": 50, "B": 30, "C": 20, "D": 15}
+item_prices = {"A": 50, "B": 30, "C": 20, "D": 15, "E":40}
 
 
 
@@ -26,6 +26,7 @@ def checkout(skus):
         discount += (b_count // 2) * 15
 
     return total - discount
+
 
 
 

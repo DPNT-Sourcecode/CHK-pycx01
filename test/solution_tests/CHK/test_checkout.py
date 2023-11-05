@@ -18,6 +18,3 @@ class TestCheckout():
 
     def test_checkout_badandgood(self):
         assert checkout_solution.checkout("BCAa") == -1
-
-
-
