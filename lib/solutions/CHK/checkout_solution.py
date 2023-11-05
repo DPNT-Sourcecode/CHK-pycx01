@@ -8,6 +8,7 @@ item_prices = {"A": 50, "B": 30, "C": 20, "D": 15, "E": 40}
 
 def checkout(skus):
     items = [*skus]
+    if items
     a_count = 0
     b_count = 0
     e_count = 0
@@ -20,6 +21,7 @@ def checkout(skus):
         if item_prices.get(item):
             total += item_prices.get(item)
         else:
+            print('here')
             return -1
 
     #apply discounts
@@ -42,6 +44,7 @@ def checkout(skus):
     discount += min(b_count, free_bs)*30
 
     return total - discount
+
 
 
 
